@@ -84,6 +84,7 @@ span:nth-of-type(2){
 .ham:hover span:nth-of-type(1) {
     width: 0%;
     transition: 0.7s ;
+    background-color: #377151;
 }
 
 span:nth-of-type(3){
@@ -120,7 +121,7 @@ span:nth-of-type(3){
 }
 
 .ham:hover span:nth-of-type(2){
-    background-color: #aeaca9;
+    background-color: #377151;
     transition: 0.9s;
 }
 
@@ -139,5 +140,59 @@ z-index: 2;
 }
 
 .nav{
-    display: none;
+display: none;
+}
+
+.nav.active{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: #4d4c4b1b;
+    height: 100%;
+    align-items: center;
+    position: absolute;
+    right: 82%;
+    top: 0%;
+    transition: 0.4ms;
+    animation: movenav 0.5s linear;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+ ul{
+display: flex;
+flex-direction: column;
+gap: 1em;
+ padding: 4em ;
+ list-style: none;
+ position: absolute;
+ top: 14%;
+ right: 13%;
+}
+
+a{
+    text-decoration: none;
+    color: #aeaca9;
+    font-size: 2em;
+}
+
+
+
+a:hover{
+    color: #1a1a1a;
+    transform: 0.7s ease;
+}
+
+@keyframes movenav{
+    0%{right: 100%; width:0px;}
+
+    10%{
+        right: 95%; width: 75px;
+    }
+
+    50%{
+        right: 88%; width: 150px;
+    }
+
+    100%{right: 82%; width: 300px;}
 }
